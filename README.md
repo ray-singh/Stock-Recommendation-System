@@ -67,3 +67,43 @@ This function removes subtrees of the given Stock AVL Tree where all P/E Ration 
 - stock_tree (AVL_Tree): The AVL Tree to be pruned
 - threshold (float): Any subtree with all pe values less than this gets removed.
 
+## Usage
+This program requires Python to be installed. After installation, you can import the classes and function defined in solution.py into another Python files. To use this program, you must first defined a dictionary (or a list of dictionaries) with relevant stock information. Eg:
+~~~
+stocks_data = [
+            {"ticker": "AAPL", "name": "Apple Inc.", "price": 150.50, "pe_ratio": 0.253,
+             "market_cap": 2000000000000, "div_yield": 1.5},
+            {"ticker": "GOOGL", "name": "Alphabet Inc.", "price": 2800.00, "pe_ratio": 0.307,
+             "market_cap": 1800000000000, "div_yield": 0.8},
+            {"ticker": "MSFT", "name": "Microsoft Corporation", "price": 320.75, "pe_ratio": 0.285,
+             "market_cap": 2200000000000, "div_yield": 1.2},
+            {"ticker": "INTC", "name": "Intel Corporation", "price": 50.25, "pe_ratio": 0.158,
+             "market_cap": 1500000000000, "div_yield": 2.0},
+            {"ticker": "CSCO", "name": "Cisco Systems Inc.", "price": 55.50, "pe_ratio": 0.202,
+             "market_cap": 1600000000000, "div_yield": 1.8},
+            {"ticker": "ORCL", "name": "Oracle Corporation", "price": 85.75, "pe_ratio": 0.183,
+             "market_cap": 1900000000000, "div_yield": 1.0},
+            {"ticker": "IBM", "name": "International Business Machines Corporation", "price": 120.00,
+             "pe_ratio": 0.146, "market_cap": 1200000000000, "div_yield": 2.5},
+            {"ticker": "HPQ", "name": "HP Inc.", "price": 30.50, "pe_ratio": 0.127, "market_cap": 800000000000,
+             "div_yield": 3.0},
+            {"ticker": "DELL", "name": "Dell Technologies Inc.", "price": 70.00, "pe_ratio": 0.221,
+             "market_cap": 1000000000000, "div_yield": 1.5},
+            {"ticker": "AMD", "name": "Advanced Micro Devices Inc.", "price": 120.25, "pe_ratio": 0.356,
+             "market_cap": 900000000000, "div_yield": 0.7},
+        ]
+~~~
+You can use this dictionary to build an AVL Tree with the build_tree_with_stocks() function.
+~~~
+        stock_tree = build_tree_with_stocks(stocks_data)
+~~~
+Next, create instances of the User class, and add in your desired P/E ration threshold and dividend yield threshold. 
+~~~
+        user_buy = User(name="First Last", pe_ratio_threshold=0.15, div_yield_threshold=1.5)
+        user_sell = User(name="Hello Goodbye", pe_ratio_threshold=25, div_yield_threshold=2.5)
+~~~
+After we have defined users and a AVL Tree to organize the provided stock data, we can use the recommend_stock() function. The action parameter must either 'buy' or 'sell'. If a match is found, the function will return the best stock option's ticker. If not a single stock matches the user's criteria, nothing will be returned.
+~~~
+        best_stock = recommend_stock(stock, user_buy, "buy")
+        best_stock = recommend_stock(stock, user_sell, "sell")
+~~~
