@@ -15,7 +15,6 @@ AVLWrappedDictionary = TypeVar("AVLWrappedDictionary")
 class Node:
     """
     Implementation of an BST and AVL tree node.
-    Do not modify.
     """
     __slots__ = ["value", "parent", "left", "right", "height"]
 
@@ -55,7 +54,6 @@ class Node:
 class BinarySearchTree:
     """
     Implementation of an BSTree.
-    Modify only below indicated line.
     """
 
     # preallocate storage: see https://stackoverflow.com/questions/472000/usage-of-slots
@@ -241,7 +239,6 @@ class BinarySearchTree:
 class AVLTree:
     """
     Implementation of an AVL tree.
-    Modify only below indicated line.
     """
 
     __slots__ = ["origin", "size"]
