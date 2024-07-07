@@ -11,7 +11,7 @@ This class represents a node in a binary tree (BST or AVL tree). It contains:
 - height: The height of the node in the tree.
 
 ### BinarySearchTree 
-This class implements a basic Binary Search Tree (BST):
+This class implements a basic Binary Search Tree (BST) Mthods:
 - height(root): Calculates the height of the tree/subtree rooted at root.
 - insert(root, val): Inserts a value into the BST.
 - remove(root, val): Removes a value from the BST.
@@ -19,7 +19,7 @@ This class implements a basic Binary Search Tree (BST):
 - search(root, val): Searches for a value in the BST.
 
 ### AVLTree
-This class extends the functionality of a BST to create an AVL Tree, which is a self-balancing binary search tree:
+This class extends the functionality of a BST to create an AVL Tree, which is a self-balancing binary search tree. Methods::
 - height(root): Calculates the height of the tree/subtree rooted at root.
 - left_rotate(root): Performs a left rotation on the subtree rooted at root.
 - right_rotate(root): Performs a right rotation on the subtree rooted at root.
@@ -62,7 +62,7 @@ Parameters:
 - user (User): A user object representing the investor's preferences.
 - action (str): A string indicating the desired action, either 'buy' or 'sell'.
 
-### prune((stock_tree: AVLTree, threshold: float)
+### prune(stock_tree: AVLTree, threshold: float)
 This function removes subtrees of the given Stock AVL Tree where all P/E Ration values are less than threshold. Parameters:
 - stock_tree (AVL_Tree): The AVL Tree to be pruned
 - threshold (float): Any subtree with all pe values less than this gets removed.
