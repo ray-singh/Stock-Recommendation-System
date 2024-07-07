@@ -1,7 +1,7 @@
 # Stock-Recommendation-System
 This program provides an automated system for managing and recommending stock investments. It allows users to input stock data and their investment preferences, such as desired P/E ratio and dividend yield thresholds. The program then organizes the stock data efficiently and uses it to analyze and suggest stocks that meet the user's criteria for buying or selling. This enhances the user's ability to make informed decisions about their stock investments, saving time and improving accuracy in the selection process.
 
-This program was created as a learning activity for my data structures and algorithm class. It is supported by my implementation of a Binary Search Tree (BST), AVL Tree, and their corresponding insertion, deletion, traversal, etc algorithms. 
+This program was created as a learning activity for my data structures and algorithm class. It is supported by my implementation of a Binary Search Tree (BST), AVL Tree, and their corresponding insertion, deletion, traversal, etc algorithms. Stocks are stored in a self-balancing AVL tree, ensuring that stock information is always quickly accessible. The tree maintains balance, allowing for efficient insertion, deletion, and retrieval operations. Users can add new stocks to the AVL tree or remove existing ones, mimicking stock listings and delistings in a real stock exchange.
 
 ## Classes
 ### Node
